@@ -3,9 +3,21 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" Title="pgeMain">
+      mc:Ignorable="d" Title="pgeMain" d:DesignWidth="307" d:DesignHeight="172">
     <DockPanel>
-        <ComboBox Width="120"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="102*"/>
+                <ColumnDefinition Width="98*"/>
+                <ColumnDefinition Width="107*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="95*"/>
+                <RowDefinition Height="77*"/>
+            </Grid.RowDefinitions>
+            <ComboBox Name="cbCiv" Height="22" Grid.Row="0" Grid.Column="1" SelectedValuePath="Key"  DisplayMemberPath ="Value" />
+            <Button Content="Valider" Height="22" Grid.Row="1" Grid.Column="1" Click="Button_Click"/>
+        </Grid>
 
     </DockPanel>
 </Page>

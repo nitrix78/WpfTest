@@ -22,9 +22,15 @@ namespace WpfTutoSynthes.Pages {
         public pgeMain() {
             InitializeComponent();
             //this.DataContext = tblUsers.getAll("", 0);
+            //cbCiv.DataContext = Dictionary<int, string>;
+            cbCiv.ItemsSource = new Dictionary<int, string>() { {1, "Mr"}, {2, "Mme"} };
+            //var ret = tblUsers.getAll("", 0);
+            //MessageBox.Show(ret.Count.ToString());
+        }
 
-            var ret = tblUsers.getAll("", 0);
-            MessageBox.Show(ret.Count.ToString());
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(cbCiv.SelectedValue.ToString());
         }
     }
 }
